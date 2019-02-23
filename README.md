@@ -4,7 +4,7 @@
 <table>
     <thead>
         <tr>
-            <th colspan="4">Day 1 (February 25, 2019) @IIT Bombay Venue: FC Kohli Auditorium, KRESIT</th        
+            <th colspan="4">Day 1 (February 25, 2019) @IIT Bombay Venue: SIC-301, KReSIT</th        
     </tr>
     </thead>
     <tbody>
@@ -51,7 +51,7 @@ Prof. Sharat Chandran</td>
 <table>
     <thead>
         <tr>
-            <th colspan="4">Day 2 (February 26, 2019) @IIT Bombay Venue: FC Kohli Auditorium, KRESIT</th        
+            <th colspan="4">Day 2 (February 26, 2019) @IIT Bombay Venue:  SIC-301, KReSIT</th        
     </tr>
     </thead>
     <tbody>
@@ -98,7 +98,7 @@ Prof. Sharat Chandran</td>
 <table>
     <thead>
         <tr>
-            <th colspan="4">Day 3 (February 27, 2019) @IIT Bombay Venue: FC Kohli Auditorium, KRESIT</th        
+            <th colspan="4">Day 3 (February 27, 2019) @IIT Bombay Venue:  SIC-301, KReSIT</th        
     </tr>
     </thead>
     <tbody>
@@ -106,7 +106,7 @@ Prof. Sharat Chandran</td>
             <td>09:00am - 10:00am</td>
             <td><a href="https://github.com/cs763/basics2apps/blob/master/Abstracts/sunita_abstract.md">Lecture 6</a></td>
             <td><b>Sequence Models</b>:  Recurrent Neural Networks for sequence Modeling.</td>
-            <td>Prof. Sunita Sarawgi</td>
+            <td>Prof. Sunita Sarawagi</td>
         </tr>
         <tr>
             <td>10:00am - 10:45am</td>
