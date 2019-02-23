@@ -43,7 +43,7 @@ Prof. Sharat Chandran</td>
         </tr>
 	     <tr>
             <td>02:00pm - 04:30pm</td>
-            <td colspan="3">Laboratory  (with individual GPUs)</td>
+		     <td colspan="3"><a href="https://github.com/cs763/basics2apps/tree/master/Assignments/lab1">Laboratory - 1</a>  (with individual GPUs)</td>
         </tr>
     </tbody>
 </table>
@@ -90,7 +90,7 @@ Prof. Sharat Chandran</td>
         </tr>
 	     <tr>
             <td>02:00pm - 04:30pm</td>
-            <td colspan="3">Laboratory  (with individual GPUs)</td>
+		     <td colspan="3"><a href="https://github.com/cs763/basics2apps/tree/master/Assignments/lab2">Laboratory- 2</a> (with individual GPUs)</td>
         </tr>
     </tbody>
 </table>
@@ -136,7 +136,7 @@ Prof. Sharat Chandran</td>
         </tr>
 	     <tr>
             <td>02:00pm - 04:30pm</td>
-            <td colspan="3">Laboratory  (with individual GPUs)</td>
+		     <td colspan="3"><a href="https://github.com/cs763/basics2apps/tree/master/Assignments/lab3">Laboratory- 3</a>  (with individual GPUs)</td>
         </tr>
     </tbody>
 </table>
