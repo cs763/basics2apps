@@ -1,0 +1,2 @@
+# Intro to Machine Learning
+This talk will throw light upon why the data-driven models have become more and more important. Next I will discuss the importance of trainable parameters in a model by discussing non-parametric and parametric models. Next, the concept of a loss function in context to machine learning will be introduced and several basic loss functions for common machine learning problems such as classification and regression will be discussed.
