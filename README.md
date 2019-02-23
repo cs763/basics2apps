@@ -1,4 +1,4 @@
-<h1><p align="center>Workshop on Deep Learning And Applications</p></h1>
+# Workshop on Deep Learning And Applications
 
 ## Schedule
 <table>
