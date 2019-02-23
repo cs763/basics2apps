@@ -1,4 +1,4 @@
-### Deep Reinforcement Learning	
+<h3><p align="center"> Deep Reinforcement Learning</p></h3>	
 
 If an agent can sense, think, and act in an unknown environment, how MUST it act? Reinforcement Learning (RL) is a general paradigm under which an agent, by trial and error, can discover actions that result in long-term gain. Integrating ideas from various disciplines, RL has matured as a field of study in the last few decades. Its successes range from training programs to decrease the waiting time for elevators in a building; to maximising profits from stock-trading; and to numerous tasks in robotic control and decision-making.
 
