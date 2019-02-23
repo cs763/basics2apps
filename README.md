@@ -11,7 +11,7 @@
         <tr>
             <td>09:00am - 10:00am</td>
             <td><a href="https://github.com/cs763/basics2apps/blob/master/Abstracts/abhishek_abstract.md">Keynote</a></td>
-            <td>History, applications and the current state-of-the-art for ML/DL based algorithms</td>
+            <td><b>History, applications and the current state-of-the-art for ML/DL based algorithms</b></td>
             <td>Abhishek Sharma (CTO Gobasco)</td>
         </tr>
         <tr>
@@ -81,7 +81,7 @@ Prof. Sharat Chandran</td>
 	     <tr>
             <td>12:00pm - 01:00pm</td>
             <td>Lecture-5</td>
-            <td>Generative Adversarial Networks(GANs) and Variational Auto Encoders(VAEs)</td>
+		     <td><b>Generative Adversarial Networks(GANs) and Variational Auto Encoders(VAEs)</b></td>
             <td>Prof. Siddhartha Chaudhuri</td>
         </tr>
 	     <tr>
