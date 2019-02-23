@@ -1,2 +1,2 @@
-# Babysitting the learning process
+<h3><p align="center">Babysitting the learning process</p></h3>
 In this talk, I will explain upon how to train a neural network, how the hyperparameters of a network should be selected. This talk will explore how to choose a good neural network architecture for your model for better performance and generalization suited to your specific problem and dataset size, why proper weight initialization is important for neural network training and help learn some sanity checks such as overfitting a single batch which can be useful for debugging model training.
