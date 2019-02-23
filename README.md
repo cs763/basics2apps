@@ -81,7 +81,7 @@ Prof. Sharat Chandran</td>
 	     <tr>
             <td>12:00pm - 01:00pm</td>
             <td>Lecture-5</td>
-            <td>Generative Adversarial Networks(GANs) and Vartional Auto Encoders(VAEs)</td>
+            <td>Generative Adversarial Networks(GANs) and Variational Auto Encoders(VAEs)</td>
             <td>Prof. Siddhartha Chaudhuri</td>
         </tr>
 	     <tr>
