@@ -1,2 +1,2 @@
-### Deep Learning for Virtual Reality	
+<h3><p align="center"> Deep Learning for Virtual Reality</p></h3>	
 The talk will look at applications of deep learning towards various aspects of virtual reality. We will start with looking at attempts towards using deep networks to control and animate characters. Then we will discuss ways in which deep networks have been used to model appearance and illumination. We will briefly touch upon the more obvious uses of deep networks to track and reconstruct humans, objects and environments that find use in both virtual and augmented reality.
