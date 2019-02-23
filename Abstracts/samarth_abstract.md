@@ -1,2 +1,2 @@
-### Visual Question & Answering	
+<h3><p align="center"> Visual Question & Answering</p></h3>	
 Recent progress in deep learning has made phenomenal progress in various perception tasks of vision. In this talk I will provide a brief overview of the recent trends and state-of-art in classification, detection, and segmentation. Next, I will provide an introduction to the task of visual question and answering and discuss the recent trends in visual explicit, compositional reasoning.
