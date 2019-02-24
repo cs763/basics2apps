@@ -2,7 +2,7 @@
 import numpy as np
 import torch
 import torch.nn as nn
-from torch.autograd import Variable
+# from torch.autograd import Variable
 from model import Lenet as Lenet
 # import torchfile
 
@@ -16,52 +16,34 @@ train_labels = np.load('norb/train_cat.npy')
 test_data = np.load('norb/test.npy')
 test_labels = np.load('norb/test_cat.npy')
 
-# Let's print the shape of the training and test data:
-# print(train_data.shape, train_labels.shape)
-# print(test_data.shape, test_labels.shape)
-
 D_in = 108*108
 D_out = 6
 gpu = 1
 
-# We'll only take a small subset of the test data for quick evaluation
 test_data = test_data[:1000]
 test_labels = test_labels[:1000]
 
-# The network expects an input of batch_size x n_channels x height x width
+# The network expects an input of batch_size x (height * width)
 # n_channels in our case is 1. For RGB images, it is 3.
-print(train_data.shape)
 
 # Preprocess your images if you want
 # train_data = preprocess_data()
 
-# create_fcn function is written in model.py.
+# create_fcn function is written in model.py
 model = Lenet()
-# Initialise a loss function.
-# eg. if we wanted an MSE Loss: loss_fn = nn.MSELoss()
-# Please search the PyTorch doc for cross-entropy loss function
-loss_fn =
 
-# Activate gradients for the input data
-# x = torch.from_numpy(x)
-# x = x.requires_grad_(True)
-train_data = torch.from_numpy(train_data).float()
-test_data = torch.from_numpy(test_data).float()
+# Converting inputs and labels into cuda (gpu) enabled torch 'Variables'.
+train_data = torch.from_numpy(train_data).requires_grad_(True)
+train_labels = torch.from_numpy(train_labels).requires_grad=False
 
-train_data =
-test_data =
+test_data = torch.from_numpy(train_data).requires_grad_(True)
+test_labels = torch.from_numpy(test_labels).requires_grad(False)
 
-# If we're planning to use cross entropy loss, the data type of the
-# targets needs to be 'long'.
-train_labels = torch.from_numpy(train_labels).long()
-test_labels = torch.from_numpy(test_labels).long()
+train_data = train_data.cuda().float()
+test_data = test_data.cuda().float()
 
-# Convert the data and labels into cuda Variables now: x = x.cuda()
-train_data =
-test_data =
-
-train_labels =
-test_labels =
+train_labels = train_labels.cuda().long()
+test_labels = test_labels.cuda().long()
 
 # Converting the entire data into cuda variable is NOT a good practice.
 # We're still able to do it here because our data is small and can fit in
@@ -74,46 +56,35 @@ test_labels =
 #             This is where we make the network learn                     #
 ###########################################################################
 
-# Converting the model and loss function into a cuda variables just like we
-# did with the data variables
-model =
-loss_fn =
+# Converting the model into a cuda model and setting up the loss function
+model = model.cuda()
+loss_fn = nn.CrossEntropyLoss().cuda()
 
-# Hyper-parameters for training. Please play with these values to find the
-# optimal training hyperparameters
+# Hyper-parameters for training
 learning_rate = 0.0001
 batch_size = 324
 n_batch = train_data.shape[0] // batch_size
-accuracy = 0.0
-n_epoch = 10
+accuracy = 0
 
-# Initializing the optimizer with hyperparameters.
-# Please play with SGD, RMSProp, Adagrad, etc.
-# Note that different optimizers may require differen hyperparameter values
-# optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
-optimizer =
-
-for t in range(n_epoch):
+# Initializing the optimizer with hyperparameters
+optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+for t in range(10):
     for m in range(n_batch):
-        # Slicing the input batch
-        inp = train_data[m*batch_size : (m+1)*batch_size]
-        tar = train_labels[m*batch_size : (m+1)*batch_size]
+        inp = train_data[m * batch_size: (m+1) * batch_size]
+        tar = train_labels[m * batch_size: (m+1) * batch_size ]
 
         # Add random perturbations in this functions. Define
         # this function if you wish to use it.
         # inp = add_noise(inp)
 
-        # Compute the network's output: Forward Prop the minibatch input
-        # using the earlier defined model
-        # pred = model(inp)
-        pred =
+        # Compute the network's output: Forward Prop
+        pred = model(inp)
 
-        # Compute the network's loss. Use the earlier defined loss_fn.
-        # loss = loss_fn(pred, tar)
-        loss =
+        # Compute the network's loss
+        loss = loss_fn(pred, tar)
 
         # Zero the gradients of all the network's parameters
-        # For this, checkout zero_grad() function of optim
+        optimizer.zero_grad()
 
         # Computer the network's gradients: Backward Prop
         loss.backward()
