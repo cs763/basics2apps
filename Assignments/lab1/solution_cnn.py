@@ -90,7 +90,7 @@ for t in range(10):
 
         # Update the network's parameters based on the computed
         # gradients
-        optimizer.step()
+        # optimizer.step()
         for f in model.parameters():
             f.data -= 0.01 * f.grad # 0.01 is the learning rate
 
