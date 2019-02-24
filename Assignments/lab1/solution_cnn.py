@@ -29,21 +29,20 @@ test_labels = test_labels[:1000]
 # Preprocess your images if you want
 # train_data = preprocess_data()
 
-# create_fcn function is written in model.py
+# Lenet is written in model.py
 model = Lenet()
 
 # Converting inputs and labels into cuda (gpu) enabled torch 'Variables'.
-train_data = torch.from_numpy(train_data).requires_grad_(True)
-train_labels = torch.from_numpy(train_labels).requires_grad=False
+train_data = torch.from_numpy(train_data).float().requires_grad_(True)
+test_data = torch.from_numpy(train_data).float().requires_grad_(True)
+train_labels = torch.from_numpy(train_labels).long()
+test_labels = torch.from_numpy(test_labels).long()
 
-test_data = torch.from_numpy(train_data).requires_grad_(True)
-test_labels = torch.from_numpy(test_labels).requires_grad(False)
+train_data = train_data.cuda()
+test_data = test_data.cuda()
 
-train_data = train_data.cuda().float()
-test_data = test_data.cuda().float()
-
-train_labels = train_labels.cuda().long()
-test_labels = test_labels.cuda().long()
+train_labels = train_labels.cuda()
+test_labels = test_labels.cuda()
 
 # Converting the entire data into cuda variable is NOT a good practice.
 # We're still able to do it here because our data is small and can fit in
@@ -92,11 +91,13 @@ for t in range(10):
         # Update the network's parameters based on the computed
         # gradients
         optimizer.step()
+        for f in model.parameters():
+            f.data -= 0.01 * f.grad # 0.01 is the learning rate
 
         print(t, m, loss.item(), accuracy)
 
     # Validation after every 2nd epoch
-    if t % 2 == 0:
+    if t % 1 == 0:
         # Forward pass
         output = model(test_data)
 
