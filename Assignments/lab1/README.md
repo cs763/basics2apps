@@ -15,7 +15,7 @@
 <p>All the relevant data can be found in <code>norb.tar.gz</code> file. The <code>train.npy</code> and <code>test.npy</code> contain the train and test images. The corresponding labels can be found in <code>train_cat.npy</code> and <code>test_cat.npy</code> files. We are going to use a subset of Norb dataset for learning object classification. The dataset provided contains approx. 30k grayscale images of size 108 x 108. A sample snapshot of the images, as provided in
 the official <a href="">webpage</a> is shown below. The categories to be predicted are: human figures, aircraft, four-legged animals, trucks, cars and no-object.
 <div align="center">
-    <img src="image_snapthot.png" width=800px />
+    <img src="https://cs.nyu.edu/~yann/research/norb/jitt-clutt-train-12x4-large.png" width=800px />
 </div>
 <p>Below you will find the details of tasks required for this assignment.</p>
 <ol>
