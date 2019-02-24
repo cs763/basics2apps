@@ -98,7 +98,7 @@ Prof. Sharat Chandran</td>
 <table>
     <thead>
         <tr>
-            <th colspan="4">Day 3 (February 27, 2019) @IIT Bombay Venue:  SIC-301, KReSIT</th        
+            <th colspan="4">Day 3 (February 27, 2019) @IIT Bombay Venue: 109 New CC/CSE Bldg, First floor</th        
     </tr>
     </thead>
     <tbody>

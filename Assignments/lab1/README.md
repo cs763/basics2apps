@@ -4,19 +4,43 @@
 <body class="stackedit">
   <div class="stackedit__html"><h1 id="lab-1"><p align="center">LAB 1</p></h1>
     <h1 id="february-20-2019"><p align="center">February 25 2019</p></h1>
-    <h3 id="problem"><p align="center">Problem</p></h3>
+    <h3 id="problem"><p align="center">Object Detection</p></h3>
     <br>
-<p>The purpose of this lab is to train a neural network using PyTorch on an image classification task. We will also compare the performance of a fully-connected network architecture against a Convolutional Neural Network architecture.</p>
+<p>The purpose of this lab is to train a neural network using PyTorch
+  on an image classification task. And get good results!
+
+<p> We are going to use a subset of Norb dataset for learning object
+  classification. The dataset provided contains approximately 30K
+  grayscale images of size 108 x 108. A sample snapshot of the images,
+  as provided in the official <a
+  href="https://cs.nyu.edu/~yann/research/norb/">webpage</a> is shown
+  below. 
+<div align="center">
+    <img src="https://cs.nyu.edu/~yann/research/norb/jitt-clutt-train-12x4-large.png"
+    width=800px /> 
+</div>
+
+<p> Zooming into the image, you should find different
+  <i>categories</i> of images against complex backgrounds, and taken
+  under different illumination conditions. There are six categories:
+  humans, aircraft, four-legged animals, trucks, cars and, lastly,
+  no-object.
+
+<p> Our data set has can be found in <code>norb.tar.gz</code>. The
+  <code>train.npy</code> and <code>test.npy</code> contain the train
+  and test images. The corresponding labels can be found in
+  <code>train_cat.npy</code> and <code>test_cat.npy</code> files.
+  
+
+<p> We also hope
+  to compare the performance of a fully-connected network architecture
+  against a Convolutional Neural Network architecture.</p> 
 <p>The implementation tasks for the assignment are divided into two parts:</p>
 <ol>
 <li>Designing a network architecture using PyTorch’s nn module.</li>
 <li>Training the designed network using PyTorch’s optim module.</li>
 </ol>
-<p>All the relevant data can be found in <code>norb.tar.gz</code> file. The <code>train.npy</code> and <code>test.npy</code> contain the train and test images. The corresponding labels can be found in <code>train_cat.npy</code> and <code>test_cat.npy</code> files. We are going to use a subset of Norb dataset for learning object classification. The dataset provided contains approx. 30k grayscale images of size 108 x 108. A sample snapshot of the images, as provided in
-the official <a href="">webpage</a> is shown below. The categories to be predicted are: human figures, aircraft, four-legged animals, trucks, cars and no-object.
-<div align="center">
-    <img src="https://cs.nyu.edu/~yann/research/norb/jitt-clutt-train-12x4-large.png" width=800px />
-</div>
+
 <p>Below you will find the details of tasks required for this assignment.</p>
 <ol>
 <li><strong>Fully-Connected Network</strong>: Write a function named <code>create_fcn()</code> in <em><strong>model.py</strong></em> file which returns a fully connected network variable. The network can be designed using nn.Sequential() container (refer to <a href="https://pytorch.org/docs/stable/nn.html#sequential">Sequential</a> and <a href="https://pytorch.org/docs/stable/nn.html#linear">Linear</a> layer’s documentation). The network should have a series of Linear and ReLU layers with the output layer having as many neurons as the number of classes.<br></li>
