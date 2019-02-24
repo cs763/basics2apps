@@ -34,8 +34,8 @@ model = Lenet()
 
 # Converting inputs and labels into cuda (gpu) enabled torch 'Variables'.
 train_data = torch.from_numpy(train_data).float().requires_grad_(True)
-test_data = torch.from_numpy(train_data).float().requires_grad_(True)
-train_labels = torch.from_numpy(test_labels).long()
+test_data = torch.from_numpy(test_data).float().requires_grad_(True)
+train_labels = torch.from_numpy(train_labels).long()
 test_labels = torch.from_numpy(test_labels).long()
 
 train_data = train_data.cuda()
