@@ -12,9 +12,12 @@
 <li>Designing a network architecture using PyTorch’s nn module.</li>
 <li>Training the designed network using PyTorch’s optim module.</li>
 </ol>
-<p>All the relevant data can be found on this <a href="http://www.cse.iitb.ac.in/~rdabral/CS763">link</a>. <br><br>
-The Train and Test folders contain data specific to the overall task of object classification.</p>
-<p>Bellow you will find the details of tasks required for this assignment.</p>
+<p>All the relevant data can be found in <code>norb.tar.gz</code> file. The <code>train.npy</code> and <code>test.npy</code> contain the train and test images. The corresponding labels can be found in <code>train_cat.npy</code> and <code>test_cat.npy</code> files. We are going to use a subset of Norb dataset for learning object classification. The dataset provided contains approx. 30k grayscale images of size 108 x 108. A sample snapshot of the images, as provided in
+the official <a href="">webpage</a> is shown below. The categories to be predicted are: human figures, aircraft, four-legged animals, trucks, cars and no-object.
+<div align="center">
+    <img src="image_snapthot.png" width=800px />
+</div>
+<p>Below you will find the details of tasks required for this assignment.</p>
 <ol>
 <li><strong>Fully-Connected Network</strong>: Write a function named <code>create_fcn()</code> in <em><strong>model.py</strong></em> file which returns a fully connected network variable. The network can be designed using nn.Sequential() container (refer to <a href="https://pytorch.org/docs/stable/nn.html#sequential">Sequential</a> and <a href="https://pytorch.org/docs/stable/nn.html#linear">Linear</a> layer’s documentation). The network should have a series of Linear and ReLU layers with the output layer having as many neurons as the number of classes.<br></li>
 <li><strong>Criterion</strong>: Define the criterion in line number x. A criterion defines a loss function. In our case, use <code>nn.CrossEntropyLoss()</code> to define a cross entropy loss. We’ll use this variable later during optimization.<br></li>
