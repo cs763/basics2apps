@@ -60,7 +60,6 @@ Prof. Sharat Chandran</td>
 		 <td><a href="https://github.com/cs763/basics2apps/blob/master/Abstracts/arjun_jain_babysitting_learning_process.md">Lecture-4</a></td>
             <td><b>Babysitting the learning process</b>: Hyperparamter selection, weight initialization, how to start with a simple neural network, how to choose a good architecture suited for the problem and dataset size, start by overfitting on your batch, etc.</td>
             <td>Prof. Arjun Jain</td>
-
         </tr>
         <tr>
             <td>09:45pm - 10:45pm</td>
