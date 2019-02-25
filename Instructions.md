@@ -15,3 +15,11 @@ ssh -i DLWorkshop.pem -L 8888:127.0.0.1:8888 ubuntu@ec2-###-##-##-###.compute-1.
 
 ## SSH Only
 ssh -i DLWorkshop.pem ubuntu@ec2-###-##-##-###.ap-south-1.compute.amazonaws.com
+
+## Other essential commands
+
+### To activate pytorch environment in anaconda
+source activate pytorch_p36
+
+### Launch jupyter notebook
+jupyter notebook
