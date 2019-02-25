@@ -1,12 +1,12 @@
-# Instruction for accessing Amazon EC2 Instances
+# Instruction for accessing Amazon EC2 instances
 
-## Instances Details
+## Instance assignment & their details
 https://docs.google.com/spreadsheets/d/1VY7HkTDS4G2I-ar2eSa79lE-fDxUIvQ20s4TOKn350I/edit?usp=sharing
 
 ## Download the key file from here
 https://www.cse.iitb.ac.in/~safeer/DLWorkshop.pem
 
-## Key Permission override
+## Key permission override
 chmod 400 DLWorkshop.pem
 
 ## Tunneling & SSH
