@@ -33,9 +33,10 @@ Prof. Sharat Chandran</td>
         </tr>
 	     <tr>
             <td>12:00pm - 01:00pm</td>
-		     <td><a href="https://github.com/cs763/basics2apps/blob/master/Abstracts/arjun_jain_babysitting_learning_process.md">Lecture-3</a></td>
-            <td><b>Babysitting the learning process</b>: Hyperparamter selection, weight initialization, how to start with a simple neural network, how to choose a good architecture suited for the problem and dataset size, start by overfitting on your batch, etc.</td>
-            <td>Prof. Arjun Jain</td>
+		                <td><a href="https://github.com/cs763/basics2apps/blob/master/Abstracts/arjun_cnn.md">Lecture-3</a></td>
+            <td><b>CNNs</b>:  Convolutions: transposed, dilated, fully-connected as convolution, sliding window as convolution</td>
+            <td>Prof. Arjun Jain,  
+Prof. Sharat Chandran</td>
         </tr>
 	     <tr>
             <td>01:00pm - 02:00pm</td>
@@ -57,10 +58,10 @@ Prof. Sharat Chandran</td>
     <tbody>
         <tr>
             <td>09:00am - 09:45am</td>
-            <td><a href="https://github.com/cs763/basics2apps/blob/master/Abstracts/arjun_cnn.md">Lecture-4</a></td>
-            <td><b>CNNs</b>:  Convolutions: transposed, dilated, fully-connected as convolution, sliding window as convolution</td>
-            <td>Prof. Arjun Jain,  
-Prof. Sharat Chandran</td>
+		 <td><a href="https://github.com/cs763/basics2apps/blob/master/Abstracts/arjun_jain_babysitting_learning_process.md">Lecture-4</a></td>
+            <td><b>Babysitting the learning process</b>: Hyperparamter selection, weight initialization, how to start with a simple neural network, how to choose a good architecture suited for the problem and dataset size, start by overfitting on your batch, etc.</td>
+            <td>Prof. Arjun Jain</td>
+
         </tr>
         <tr>
             <td>09:45pm - 10:45pm</td>
