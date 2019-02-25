@@ -48,7 +48,6 @@ Prof. Sharat Chandran</td>
         </tr>
     </tbody>
 </table>
-
 <table>
     <thead>
         <tr>
