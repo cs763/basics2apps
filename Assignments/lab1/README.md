@@ -4,7 +4,7 @@
 <body class="stackedit">
   <div class="stackedit__html"><h1 id="lab-1"><p align="center">LAB 1</p></h1>
     <h1 id="february-20-2019"><p align="center">February 25 2019</p></h1>
-    <h3 id="problem"><p align="center">Object Detection</p></h3>
+    <h3 id="problem"><p align="center">Object Classification</p></h3>
     <br>
 <p>The purpose of this lab is to train a neural network using PyTorch
   on an image classification task. And get good results!
