@@ -7,7 +7,7 @@ class VOC(data.Dataset):
     def __init__(self, root, image_set):
         '''
             root: The root directory of the dataset
-            image_set: 'train'|'valid'|'test'
+            image_set: 'train'|'val'|'test'
         '''
         self.root = root
         self.image_set = image_set
@@ -18,6 +18,7 @@ class VOC(data.Dataset):
         splits_dir = os.path.join(voc_root, 'ImageSets/Segmentation')
 
         split_f = os.path.join(splits_dir, image_set.rstrip('\n') + '.txt')
+        # split_f = os.path.join(splits_dir, 'train.txt')
 
         # Reading the image names from the train.txt file
         with open(os.path.join(split_f), "r") as f:
@@ -25,6 +26,14 @@ class VOC(data.Dataset):
 
         self.images = [os.path.join(image_dir, x + ".jpg") for x in file_names]
         self.masks = [os.path.join(mask_dir, x + ".png") for x in file_names]
+        '''
+        if image_set == 'train':
+            self.images = self.images[:180]
+            self.masks = self.masks[:180]
+        else:
+            self.images = self.images[180:]
+            self.masks = self.masks[180:]
+        '''
         assert (len(self.images) == len(self.masks))
 
 
