@@ -27,10 +27,11 @@ def train(epoch, dataloader, model, criterion, optimizer, image_set = 'train'):
             input = input.float().cuda()
         target = target.float().cuda()
 
-        output = model(input)
+        # Get the model output
+        output = 
 
-        # Introducing the loss here
-        loss = criterion(output, target)
+        # Introducing the loss here. Compute the loss value
+        loss = 
         loss_meter += loss.item()
 
         # Compute acc here
@@ -38,10 +39,10 @@ def train(epoch, dataloader, model, criterion, optimizer, image_set = 'train'):
         acc_meter += acc.item()
 
         if image_set == 'train':
-            # routine lines from last lab
-            optimizer.zero_grad() 
-            loss.backward()
-            optimizer.step()
+            # In the next three lines:
+            # Zero the existing gadients
+            # Do a backward pass
+            # Update the weights
 
         if i % 3 == 0:
             print(image_set, ' loss at epoch ', str(epoch), ' iteration ', str(i), ' is: ', loss_meter / (i+1),
@@ -73,7 +74,8 @@ if __name__ == "__main__":
     criterion = criterion.cuda()
 
     # Inititialize the optimizer.
-    optimizer = torch.optim.Adam(model.parameters(), 0.001)
+    lr = 0.1
+    optimizer = torch.optim.Adam(model.parameters(), lr)
     n_epochs = 10
     for i in range(n_epochs):
         train(i, train_dataloader, model, criterion, optimizer, 'train')
