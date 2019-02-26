@@ -1,1 +1,1 @@
-https://pjreddie.com/media/files/VOCtrainval_06-Nov-2007.tar
+http://www.cse.iitb.ac.in/~rdabral/dl_workshop/VOC_2007.tar
