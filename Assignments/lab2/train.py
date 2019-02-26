@@ -14,38 +14,7 @@ def compute_acc(pred, gt):
     pred = pred.argmax(1).float()
     gt = gt.argmax(1).float()
     acc = pred.eq(gt).float().sum() / torch.numel(gt)
-    
-    # gt_bin = gt.int()
-    # intersection = (pred_bin & gt_bin).float().sum()
-    # union = (pred_bin | gt_bin).float().sum()
-    # iou = intersection / (union + 0.000001)
     return acc
-
-def segments_to_masks(seg):
-	seg_height = seg.shape[0]
-	seg_width = seg.shape[1]
-	masks = np.zeros((21, seg_height, seg_width))
-	for i in range(seg_height):
-		for j in range(seg_width):
-			pixel_class = seg[i,j]
-
-			# Since white lines are just for the sake of boundary, we will
-			# predict them
-			if pixel_class != 255:
-				masks[pixel_class, i, j] = 1
-	return masks
-
-def plot_seg(image, seg):
-    seg = seg[0].argmax(-3).squeeze()
-    image = image[0].squeeze()
-    print(seg.shape)
-    masks = segments_to_masks(seg)
-    plt.figure
-    plt.imshow(image)
-    for i in range(masks.shape[0]):
-        plt.imshow(masks[i], alpha=0.1)
-    plt.show()
-
 
 def train(epoch, dataloader, model, criterion, optimizer, image_set = 'train'):
     loss_meter = 0
@@ -67,11 +36,6 @@ def train(epoch, dataloader, model, criterion, optimizer, image_set = 'train'):
         # Compute acc here
         acc = compute_acc(output, target)
         acc_meter += acc.item()
-
-        # Visualizing the outputs
-        # if epoch > 0 and image_set == 'val':
-        plot_seg(input.detach().cpu().numpy(), output.detach().cpu().numpy())
-            
 
         if image_set == 'train':
             # routine lines from last lab
