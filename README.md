@@ -119,7 +119,7 @@ Prof. Sharat Chandran</td>
         </tr>
 	     <tr>
             <td>11:00am - 12:00pm</td>
-            <td>Application-4</td>
+            <td><a href="https://github.com/cs763/basics2apps/blob/master/Abstracts/3D.md">Application-4</a></td>
             <td><b>CNNs for meshes, surfaces, etc.</b></td>
             <td>Prof. Siddhartha Chaudhuri</td>
         </tr>
