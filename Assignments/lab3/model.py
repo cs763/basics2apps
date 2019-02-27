@@ -8,17 +8,19 @@ class RNN(nn.Module):
         super(RNN, self).__init__()
 
         self.hidden_size = hidden_size
-        self.i2h = nn.Linear(input_size + hidden_size, hidden_size)
-        self.h2o = nn.Linear(hidden_size, output_size)
-        self.i2o = nn.Linear(input_size + hidden_size, output_size)
-        self.softmax = nn.LogSoftmax()
+        # A Linear layer of size (input_size + hidden_size, hidden_size)
+        self.i2h = 
+        # A Linear layer of size (input_size + hidden_size, output) 
+        self.i2o = 
 
     def forward(self, input, hidden):
+        # Concatenates input and hidden vectors
         combined = torch.cat((input, hidden), 1)
-        hidden = self.i2h(combined)
-        output = self.i2o(combined)
-        output = self.softmax(output)
-
+        # Connect the two layers in the RNN fashion, i.e., combined to i2h,
+        # and combined to i2o
+        hidden = 
+        output = 
+        # Return the output at each time step along with the hidden vector
         return output, hidden
 
     def init_hidden(self, batch_size):

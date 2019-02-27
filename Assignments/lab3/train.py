@@ -69,7 +69,8 @@ if __name__ == "__main__":
     # Initialize the network. Hidden size: 1024.
     # 57 is the length of the one-hot-encoded input at each timestep
     model = RNN(57, 1024, dataset.n_categories)
-    criterion = nn.NLLLoss()
+    # criterion = nn.NLLLoss()
+    criterion = nn.CrossEntropyLoss()
 
     # comment if not using a gpu
     model = model.cuda()

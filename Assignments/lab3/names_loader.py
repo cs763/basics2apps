@@ -56,8 +56,6 @@ class NameData(data.Dataset):
         self.max_length = 18
 
 
-
-
     def findFiles(self, path): return glob.glob(path)
 
     # Turn a Unicode string to plain ASCII, thanks to https://stackoverflow.com/a/518232/2809427
@@ -90,6 +88,17 @@ class NameData(data.Dataset):
         for li, letter in enumerate(line):
             tensor[li][0][self.letterToIndex(letter)] = 1
         return tensor
+    
+    def nameToTensor(self, name):
+        tensor = self.lineToTensor(name)
+        input = torch.zeros((self.max_length, 1, self.n_letters))
+
+        if tensor.size(0) < self.max_length:
+            n_zeros = self.max_length - tensor.size(0)
+            input[n_zeros:,:,:] = tensor
+        
+        return input.squeeze()
+    
 
     def __getitem__(self, index):
         category = self.labels[index]
@@ -106,14 +115,15 @@ class NameData(data.Dataset):
 
         return input.squeeze(), category_tensor
 
-
     def __len__(self):
         return len(self.inputs)
 
 
 # if __name__ == "__main__":
-#     dataset = NameData('./data', 'train')
-#     dataloader = data.DataLoader(
+#    dataset = NameData('./data', 'train')
+#    name = 'krizhevsky'
+#    print(dataset.nameToTensor(name).shape)
+#    dataloader = data.DataLoader(
 #             dataset, batch_size = 2, shuffle = False)
 
     # for i, (f, t) in enumerate(dataloader):
